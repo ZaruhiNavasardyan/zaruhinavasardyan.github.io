@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zaruhi Navasardyan</title>
+<meta name="description" content="Homepage of Zaruhi Navasardyan, a researcher at Metric AI Lab in Yerevan working on robotic failure detection for Physical AI, and on text embeddings for low-resource languages.">
+<meta property="og:title" content="Zaruhi Navasardyan">
+<meta property="og:description" content="Researcher at Metric AI Lab, Yerevan. Robotic failure detection for Physical AI; text embeddings for low-resource languages.">
+<meta property="og:type" content="profile">
+<meta name="theme-color" content="#f7f8f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131615" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f7f8f7;
+    --ink:#1c1b19;
+    --muted:#5f6b68;
+    --faint:#77817d;
+    --rule:#e4e6e3;
+    --accent:#0f5d56;
+    --accent-ink:#0b4a44;
+    --panel:#eef3f1;
+    --panel-rule:#d6e2de;
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --paper:#131615;
+      --ink:#e8eae6;
+      --muted:#9ca7a2;
+      --faint:#717c77;
+      --rule:#282d2a;
+      --accent:#5fb4a8;
+      --accent-ink:#8ed0c6;
+      --panel:#181d1b;
+      --panel-rule:#2c3532;
+    }
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+
+  html{ -webkit-text-size-adjust:100%; }
+
+  body{
+    margin:0 auto;
+    max-width:38rem;
+    padding:clamp(2.4rem, 6vw, 4.6rem) 1.5rem 6rem;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    font-optical-sizing:auto;
+    font-size:17px;
+    line-height:1.62;
+    text-rendering:optimizeLegibility;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{ color:var(--accent); text-decoration:underline; text-decoration-thickness:.055em; text-underline-offset:2.5px; }
+  a:hover{ color:var(--accent-ink); }
+
+  :focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-radius:2px; }
+
+  /* ---- masthead ---- */
+
+  .intro{
+    display:flex;
+    gap:1.5rem;
+    align-items:flex-start;
+  }
+  .intro-text{ min-width:0; }
+
+  .portrait{
+    flex:none;
+    width:132px;
+    height:132px;
+    object-fit:cover;
+    object-position:center top;
+    border:1px solid var(--rule);
+    border-radius:6px;
+    background:#fff;
+  }
+
+  h1{
+    margin:0;
+    font-weight:500;
+    font-size:clamp(2.05rem, 5.4vw, 2.8rem);
+    letter-spacing:-0.021em;
+    line-height:1.12;
+    text-wrap:balance;
+  }
+
+  .role{
+    margin:.85rem 0 1.5rem;
+    font-family:var(--sans);
+    font-size:.76rem;
+    font-weight:500;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--muted);
+    display:flex;
+    align-items:center;
+    gap:.7rem;
+  }
+  .role::before{
+    content:"";
+    width:2.1rem;
+    height:2px;
+    background:var(--accent);
+    flex:none;
+  }
+
+  .bio p{
+    margin:0 0 .95rem;
+    max-width:34rem;
+  }
+  .bio strong{ font-weight:600; }
+
+  .links{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.5rem;
+    margin-top:1.7rem;
+    font-family:var(--sans);
+  }
+  .links a{
+    display:inline-block;
+    padding:.32rem .62rem;
+    border:1px solid var(--rule);
+    border-radius:4px;
+    font-size:.8rem;
+    color:var(--muted);
+    text-decoration:none;
+    transition:border-color .15s, color .15s;
+  }
+  .links a:hover{ border-color:var(--accent); color:var(--accent); }
+
+  /* ---- sections ---- */
+
+  section{ margin-top:3.6rem; }
+
+  .eyebrow{
+    font-family:var(--sans);
+    font-size:.71rem;
+    font-weight:500;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    color:var(--faint);
+  }
+
+  h2{
+    margin:0 0 1rem;
+    font-weight:600;
+    font-size:1.32rem;
+    letter-spacing:-0.012em;
+  }
+
+  /* highlighted primary section */
+
+  .primary{
+    margin-top:3.6rem;
+    padding:1.7rem 1.6rem 1.1rem;
+    background:var(--panel);
+    border:1px solid var(--panel-rule);
+    border-radius:7px;
+  }
+
+  /* ---- works ---- */
+
+  .work{
+    padding:1.35rem 0;
+    border-top:1px solid var(--rule);
+  }
+  .work:first-of-type{ border-top:0; padding-top:.2rem; }
+  .primary .work:first-of-type{ padding-top:.3rem; }
+
+  .work h3{
+    margin:0 0 .4rem;
+    font-weight:600;
+    font-size:1.06rem;
+    line-height:1.32;
+    letter-spacing:-0.005em;
+  }
+
+  .authors{
+    font-family:var(--sans);
+    font-size:.84rem;
+    color:var(--muted);
+    margin-bottom:.12rem;
+  }
+  .authors .me{ color:var(--accent-ink); font-weight:600; }
+
+  .venue{
+    font-style:italic;
+    font-size:.9rem;
+    color:var(--faint);
+  }
+
+  .pills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.4rem;
+    margin-top:.55rem;
+    font-family:var(--sans);
+  }
+  .pills a{
+    display:inline-block;
+    padding:.22rem .5rem;
+    border:1px solid var(--rule);
+    border-radius:3px;
+    font-size:.74rem;
+    color:var(--muted);
+    text-decoration:none;
+    transition:border-color .15s, color .15s;
+  }
+  .pills a:hover{ border-color:var(--accent); color:var(--accent); }
+
+  /* ---- news ---- */
+
+  ul.news{ list-style:none; margin:0; padding:0; }
+  ul.news li{
+    display:grid;
+    grid-template-columns:4.7rem 1fr;
+    gap:1rem;
+    padding:.62rem 0;
+    border-top:1px solid var(--rule);
+  }
+  ul.news li:first-child{ border-top:0; }
+  ul.news .when{
+    font-family:var(--mono);
+    font-size:.76rem;
+    color:var(--faint);
+    padding-top:.28rem;
+    white-space:nowrap;
+  }
+  ul.news .what{ font-size:.98rem; }
+
+  /* ---- footer ---- */
+
+  footer{
+    margin-top:4rem;
+    padding-top:1rem;
+    border-top:1px solid var(--rule);
+    font-family:var(--sans);
+    font-size:.8rem;
+    color:var(--faint);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:.5rem;
+  }
+  footer a{ color:var(--faint); }
+  footer a:hover{ color:var(--accent); }
+
+  @media (max-width:560px){
+    body{ padding-top:2rem; font-size:16.5px; }
+    .intro{ gap:1.1rem; }
+    .portrait{ width:96px; height:96px; }
+    .primary{ padding:1.4rem 1.15rem .9rem; }
+    ul.news li{ grid-template-columns:1fr; gap:.15rem; }
+    ul.news .when{ padding-top:0; }
+    footer{ flex-direction:column; }
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{ transition:none !important; }
+  }
+
+  @media print{
+    body{ max-width:none; color:#000; }
+    a{ color:#000; }
+    .links a,.pills a{ border-color:#bbb; }
+    .primary{ background:none; border-color:#ccc; }
+  }
+</style>
+</head>
+<body>
+
+<!--
+  To host on GitHub Pages: put this file as index.html at the root of a
+  repository named  <your-username>.github.io  (commit zaruhi.jpg alongside it),
+  then enable Pages in the repo settings. It will be live at
+  https://<your-username>.github.io/
+-->
+
+<header>
+  <div class="intro">
+    <img class="portrait" src="zaruhi.jpg" width="132" height="132"
+         alt="Zaruhi Navasardyan" fetchpriority="high">
+    <div class="intro-text">
+      <h1>Zaruhi Navasardyan</h1>
+      <p class="role">Researcher &middot; Metric AI Lab &middot; Yerevan</p>
+
+      <div class="bio">
+        <p>
+          I am a researcher at <a href="https://www.metricailab.com">Metric AI Lab</a> in
+          Yerevan, Armenia. The lab specialises in Physical AI, and my own work is mainly on
+          <strong>robotic failure detection</strong> &mdash; revealing the earlier possible signs of failure, understand when and why the robots fail, develop systems to capture that.
+        </p>
+        <p>
+          My research also includes text embeddings and retrieval for low-resource languages, especially Armenian, where limited training data remains a central challenge.
+        </p>
+      </div>
+
+      <nav class="links" aria-label="Profiles and contact">
+        <a href="mailto:zaruhi@metricailab.com">Email</a>
+        <a href="https://arxiv.org/search/cs?searchtype=author&amp;query=Navasardyan,+Z">arXiv</a>
+        <a href="https://scholar.google.com/citations?hl=en&amp;user=xje43AkAAAAJ" rel="noopener">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/zaruhi-navasardyan/" rel="noopener">LinkedIn</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<section aria-labelledby="news-h">
+  <p class="eyebrow">Recent</p>
+  <h2 id="news-h">News</h2>
+  <ul class="news">
+    <li>
+      <span class="when">Sep 2026</span>
+      <span class="what">
+        I will be at <a href="https://eccv.ecva.net/Conferences/2026/">ECCV&nbsp;2026</a> in
+        Malm&ouml;, 8&ndash;12 September. Happy to talk to anyone working on runtime
+        monitoring of robot policies, world models, or how embodied systems get evaluated.
+      </span>
+    </li>
+    <li>
+      <span class="when">Sep 2026</span>
+      <span class="what">
+        FailBench is on
+        <a href="https://arxiv.org/abs/2609.03611">arXiv</a>. It gathers
+        2,197 real and simulated manipulation attempts from 14 datasets, most of which were
+        never built for failure detection, and asks how well vision-language models judge
+        whether the robot succeeded. We tested thirteen detectors including general-purpose and specialist VLMs, top score is 0.77, measured in balanced accuracy, errors especially concentrated in the contact-rich, hard to see from visual input.
+      </span>
+    </li>
+    <li>
+      <span class="when">Aug 2026</span>
+      <span class="what">
+        Our work on physical AI benchmark audit and meta-analysis is on
+        <a href="https://arxiv.org/abs/2608.25940">arXiv</a>. From a 51-model by 12-benchmark score matrix, a
+        greedy selection keeps four of the twelve and recovers 78.5% of the utility; dropping
+        the redundant pairs reshuffles 22 of 51 models by three or more places.
+      </span>
+    </li>
+    <li>
+      <span class="when">Apr 2026</span>
+      <span class="what">
+        We put out <a href="https://huggingface.co/blog/Metric-AI/armbench-llm">ArmBench-LLM</a>,
+        a public leaderboard for how well frontier models &mdash; closed and open source &mdash;
+        solve tasks in Armenian.
+      </span>
+    </li>
+    <li>
+      <span class="when">Mar 2026</span>
+      <span class="what">
+        I presented our <a href="https://aclanthology.org/2026.loreslm-1.31/">Less is More</a>
+        paper on adapting text embeddings for low-resource languages at LoResLM, co-located
+        with EACL&nbsp;2026 in Rabat.
+      </span>
+    </li>
+    <li>
+      <span class="when">Mar 2026</span>
+      <span class="what">
+        We released <a href="https://huggingface.co/blog/Metric-AI/ate-2">ATE-2</a>, our
+        Armenian text-embedding models and the accompanying ArmBench-TextEmbed benchmark.
+      </span>
+    </li>
+  </ul>
+</section>
+
+<section class="primary" aria-labelledby="physical-h">
+  <h2 id="physical-h">Physical AI</h2>
+
+  <article class="work">
+    <h3>FailBench: How Reliable are VLMs at Judging Robot Task Success?</h3>
+    <p class="authors"><span class="me">Zaruhi Navasardyan</span>, Tatul Danielyan, Hrant Davtyan</p>
+    <p class="venue">Preprint &middot; 2026</p>
+    <p class="pills">
+      <a href="https://arxiv.org/abs/2609.03611">arXiv</a>
+      <a href="https://arxiv.org/pdf/2609.03611">PDF</a>
+      <a href="https://metric-ai-lab.github.io/failbench/">Project</a>
+    </p>
+  </article>
+
+  <article class="work">
+    <h3>A Statistical Audit of Physical AI Benchmark Redundancy</h3>
+    <p class="authors"><span class="me">Zaruhi Navasardyan</span>, Hrant Davtyan</p>
+    <p class="venue">Preprint &middot; 2026</p>
+    <p class="pills">
+      <a href="https://arxiv.org/abs/2608.25940">arXiv</a>
+      <a href="https://arxiv.org/pdf/2608.25940">PDF</a>
+      <a href="https://metric-ai-lab.github.io/metabench">Project</a>
+    </p>
+  </article>
+</section>
+
+<section aria-labelledby="lrl-h">
+  <h2 id="lrl-h">Low-resource languages</h2>
+
+  <article class="work">
+    <h3>Less is More: Adapting Text Embeddings for Low-Resource Languages with Small-Scale Noisy Synthetic Data</h3>
+    <p class="authors"><span class="me">Zaruhi Navasardyan</span>, Spartak Bughdaryan, Bagrat Minasyan, Hrant Davtyan</p>
+    <p class="venue">LoResLM @ EACL&nbsp;2026</p>
+    <p class="pills">
+      <a href="https://aclanthology.org/2026.loreslm-1.31/">ACL Anthology</a>
+      <a href="https://arxiv.org/abs/2603.22290">arXiv</a>
+      <a href="https://metric-ai-lab.github.io/less-is-more-embeddings/">Project</a>
+    </p>
+  </article>
+
+  <article class="work">
+    <h3>ArmBench-LLM</h3>
+    <p class="authors">Metric AI Lab</p>
+    <p class="venue">Benchmark &amp; leaderboard &middot; 2026</p>
+    <p class="pills">
+      <a href="https://huggingface.co/blog/Metric-AI/armbench-llm">Write-up</a>
+      <a href="https://huggingface.co/spaces/Metric-AI/ArmBench-LLM-Legacy">Leaderboard</a>
+      <a href="https://github.com/Metric-AI-Lab/lighteval">Code</a>
+    </p>
+  </article>
+
+  <article class="work">
+    <h3>ATE-2 &mdash; Armenian text embeddings &amp; the ArmBench-TextEmbed benchmark</h3>
+    <p class="authors">Metric AI Lab</p>
+    <p class="venue">Open models &amp; benchmark &middot; 2026 &middot; presented at LoResLM @ EACL&nbsp;2026</p>
+    <p class="pills">
+      <a href="https://huggingface.co/blog/Metric-AI/ate-2">Write-up</a>
+      <a href="https://huggingface.co/collections/Metric-AI/armenian-ai">Models</a>
+      <a href="https://huggingface.co/spaces/Metric-AI/ArmBench-TextEmbed">Leaderboard</a>
+      <a href="https://github.com/Metric-AI-Lab/ArmBench-TextEmbed">Code</a>
+    </p>
+  </article>
+</section>
+
+<footer>
+  <span>Yerevan, Armenia &middot; <a href="mailto:zaruhi@metricailab.com">zaruhi@metricailab.com</a></span>
+  <span>Updated September 2026</span>
+</footer>
+
+</body>
+</html>
