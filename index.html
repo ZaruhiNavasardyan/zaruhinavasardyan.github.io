@@ -8,22 +8,20 @@
 <meta property="og:title" content="Zaruhi Navasardyan">
 <meta property="og:description" content="Researcher at Metric AI Lab, Yerevan. Robotic failure detection for Physical AI; text embeddings for low-resource languages.">
 <meta property="og:type" content="profile">
-<meta name="theme-color" content="#f7f8f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#131615" media="(prefers-color-scheme: dark)">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#f7f8f7;
+    --paper:#ffffff;
     --ink:#1c1b19;
     --muted:#5f6b68;
     --faint:#77817d;
     --rule:#e4e6e3;
     --accent:#0f5d56;
     --accent-ink:#0b4a44;
-    --panel:#eef3f1;
-    --panel-rule:#d6e2de;
     --serif: "Newsreader", Georgia, "Times New Roman", serif;
     --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
     --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
@@ -37,8 +35,6 @@
       --rule:#282d2a;
       --accent:#5fb4a8;
       --accent-ink:#8ed0c6;
-      --panel:#181d1b;
-      --panel-rule:#2c3532;
     }
   }
 
@@ -159,16 +155,6 @@
     letter-spacing:-0.012em;
   }
 
-  /* highlighted primary section */
-
-  .primary{
-    margin-top:3.6rem;
-    padding:1.7rem 1.6rem 1.1rem;
-    background:var(--panel);
-    border:1px solid var(--panel-rule);
-    border-radius:7px;
-  }
-
   /* ---- works ---- */
 
   .work{
@@ -176,7 +162,6 @@
     border-top:1px solid var(--rule);
   }
   .work:first-of-type{ border-top:0; padding-top:.2rem; }
-  .primary .work:first-of-type{ padding-top:.3rem; }
 
   .work h3{
     margin:0 0 .4rem;
@@ -260,7 +245,6 @@
     body{ padding-top:2rem; font-size:16.5px; }
     .intro{ gap:1.1rem; }
     .portrait{ width:96px; height:96px; }
-    .primary{ padding:1.4rem 1.15rem .9rem; }
     ul.news li{ grid-template-columns:1fr; gap:.15rem; }
     ul.news .when{ padding-top:0; }
     footer{ flex-direction:column; }
@@ -274,7 +258,6 @@
     body{ max-width:none; color:#000; }
     a{ color:#000; }
     .links a,.pills a{ border-color:#bbb; }
-    .primary{ background:none; border-color:#ccc; }
   }
 </style>
 </head>
@@ -367,13 +350,14 @@
       <span class="when">Mar 2026</span>
       <span class="what">
         We released <a href="https://huggingface.co/blog/Metric-AI/ate-2">ATE-2</a>, our
-        Armenian text-embedding models and the accompanying ArmBench-TextEmbed benchmark.
+        Armenian text-embedding models and the accompanying
+        <a href="https://huggingface.co/spaces/Metric-AI/ArmBench-TextEmbed">ArmBench-TextEmbed</a> benchmark.
       </span>
     </li>
   </ul>
 </section>
 
-<section class="primary" aria-labelledby="physical-h">
+<section aria-labelledby="physical-h">
   <h2 id="physical-h">Physical AI</h2>
 
   <article class="work">
